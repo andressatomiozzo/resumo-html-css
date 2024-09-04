@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Resumo</title>
+</head>
+<body>
+    <h1>Resumo prático do que aprendi com o Guanabara</h1>
+
+    <h2>Para comentar</h2>
+    <p>Em HTML &lt;!-- blabla --&gt;</p>
+    <p>Em CSS /* blabla */</p>
+
+    <h2>Listas</h2>
+    <h3>Listas ordenadas - ol - type="1 A a I i" start="x"</h3>
+    <ol type="i" start="4"> <!-- 1 A a I i-->
+        <li>Primeiro</li>
+        <li>Segundo</li>
+        <li>Terceiro</li>
+    </ol>
+
+    <h3>Listas não ordenadas - ul - type="disc circle square"</h3>
+    <ul type="disc"> <!-- disc circle square-->
+        <li>Primeiro</li>
+        <li>Segundo</li>
+        <li>Terceiro</li>
+    </ul>
+
+    <h3>Listas de definições (mecanismos de busca) - dt dd</h3>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd>
+    <dt>CSS</dt>
+    <dd>Linguagem de marcação para a criação do design de um site.</dd>
+    <dt>JavaScript</dt>
+    <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+
+    <h2>Parágrafos</h2>
+    <ul>
+        <li>"<strong>text-align</strong>", os valores mais comuns dessa propriedade são: <strong>center, right, left e justify</strong></li>
+        <li>"<strong>text-indent</strong>" - recuo no início de um parágrafo - "<strong>30px</strong>" de recuo.</li>
+        <li>"<strong>line-height: 1em</strong>" - é o espaçamento entre as linhas</li>
+    </ul>
+
+    <h2>Borda</h2>
+    <ul>
+        <li>Largura: "<strong>border-width</strong>"</li>
+        <li>Estilo: "<strong>border-style</strong>" - solid, dashed, dotted, double, groove
+        <li>Cor: "<strong>border-color</strong>"</li>
+        <li><strong>Shorthand</strong>: border: 10px solid red; (largura, estilo, cor)</li>
+
+        <li><strong>box-sizing</strong>: border-box; -> inclui o padding e a borda na largura e altura total do elemento</li>
+    </ul>
+
+    <h3>Borda arredondada</h3>
+    <ul>
+        <li><strong>border-radious</strong>: 10px</li>
+        <li>border-radious:50%: para fazer um círculo</li>
+        <li><strong>overflow: hidden</strong>; - Tudo o que tiver pra fora da borda do pai será excluído</li>
+    </ul>
+
+    <h2>Sombra</h2>
+    <ul>
+        <li><strong>box-shadow</strong>: 2px 2px 3px rgba(0, 0, 0, 0.5)</li>
+        <li>Deslocamento 1. horizontal, 2. vertical, 3. spread, 4. blur (no menu de inspeção do Chrome)</li>
+        <li>Dá para fazer uma sombra interna </li>
+        <li>box-shadow: <strong>inset</strong> 2px 2px 3px rgba(0, 0, 0, 0.5);</li>
+    </ul>
+
+    <h2>Background</h2>
+    <ul>
+        <li><strong>background-size</strong>: 100px 100px; (distorce a imagem) / cover (obre a tela toda mesmo que tenha que cortar a imagem)</li>
+        <li><strong>background-repeat</strong>: no-repeat; (ou repeat-x/repeat-y)</li>
+        <li><strong>background-position</strong>: left top; / center center / etc</li>
+        <li><strong>background-attachment</strong>: scroll;	(padrão; o fundo rola junto com o conteúdo) / fixed; (fundo fixo à tela, a medida que o conteúdo rola)</li>
+        <li><strong>Shorthand</strong>: color > image > position > / > size > repeat > attachment</li>
+        <li><strong>background</strong>: black url('imagens/wallpaper002.jpg') center center / cover no-repeat fixed;</li>
+    </ul>
+
+    <h2>DIV</h2>
+    <ul>
+        <li><strong>float:left;</strong> - deixa a div ou img a direita ou esquerda do pai</li>
+    </ul>
+
+    <h2>Formulário</h2>
+    <p>GET (padrão), POST (+ seguro)</p>
+    <p>Ligar o label no input</p>
+
+
+    <h2>Tags de agrupamento (grouping tags):</h2>
+    <h3>Sem valor semântico:</h3>
+    <ul>
+        <li>&lt;div&gt;: block</li>
+        <li>&lt;span&gt;: inline</li>
+    </ul>
+    
+    <h3>Com valor semântico:</h3>
+    <ul>
+        <li>&lt;header&gt;: cabeçalho</li>
+        <li>&lt;nav&gt;: navegação</li>
+        <li>&lt;main&gt;: principal</li>
+        <li>&lt;section&gt;: seção</li>
+        <li>&lt;article&gt;: artigo</li>
+        <li>&lt;aside&gt;: eriférico ao artigo</li>
+        <li>&lt;footer&gt;: rodapé</li>
+    </ul>
+   
+
+
+
+
+
+
+
+
+
+    <h2><abbr title= "Inserir em vários formatos. Quanto menor a tela, menor o tamanho da foto. Cap11"> Dinamicidade </abbr></h2>
+    <h3>Imagens: &lt;picture&gt;</h3>
+    <p>
+        <picture>
+            <source media="(max-width: 725px)" srcset="imagens/foto-p.png" type="image/png">
+            <source media="(max-width:1025px)" srcset="imagens/foto-m.png" type="image/png">
+            <img src="imagens/foto-g.png" alt="Imagem flexível">
+        </picture>
+    </p>
+
+    <h3>Tem pra música &lt;audio&gt; e vídeo &lt;video&gt; veja mais nas anotações cap 11</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Formatação de textos</h2>
+    <ul>
+        <li>&lt;code&gt; &lt;/code&gt; &rarr; <code>Fonte monoespaçada</code></li>
+        <li>&lt;pre&gt; &lt;/pre&gt; &rarr; <pre>Manter exatamente como tá (com a queb
+            ra de linha etc)</pre></li>
+        <li>&lt;q&gt; &lt;/q&gt; &rarr; <q>Citação simples</q></li>
+        <li>&lt;blockquote&gt; &lt;/blockquote&gt; &rarr; <blockquote>Citação complexa</blockquote></li>
+        <li>&lt;abbr title= “ ”&gt; &lt;/abbr&gt; &rarr; <abbr title= "Isso é uma abreviação">IEUA</blockquote></li>
+        <li>&lt;bdo dir="rtl"&gt; &lt;/bdo&gt; &rarr; <bdo dir="rtl">Texto invertido</bdo></li>
+    </ul>
+    
+
+
+
+    <h2>Tags</h2>
+    <p>&lt;br&gt;</p><br>
+    <p>&lt;hr&gt;</p><hr>
+
+</body>
+</html>
